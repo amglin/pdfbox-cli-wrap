@@ -249,7 +249,7 @@ function promiseJavaSpawn(sArgs) {
         });
     });
 }
-var PdfBoxCliWrap = (function () {
+var PdfBoxCliWrap = /** @class */ (function () {
     function PdfBoxCliWrap() {
     }
     PdfBoxCliWrap.promiseJavaSpawn = function (sArgs) {
@@ -526,9 +526,9 @@ var PdfBoxCliWrap = (function () {
             });
         });
     };
+    PdfBoxCliWrap.jarPath = ackPdfBoxJarPath; //helpful ref to where Jar file lives
     return PdfBoxCliWrap;
 }());
-PdfBoxCliWrap.jarPath = ackPdfBoxJarPath; //helpful ref to where Jar file lives
 exports.PdfBoxCliWrap = PdfBoxCliWrap;
 var tempCounter = 0;
 function getTempFileName(ext, prefix) {
